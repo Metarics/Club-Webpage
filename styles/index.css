@@ -40,7 +40,7 @@
 	box-shadow: 0 0 20px var(--SB);
 	background: var(--PF);
 	z-index: 10;
-	opacity: 0.8;
+	opacity: 1;
 }
 
 .navbar-tabs-container--top {
@@ -110,18 +110,19 @@
 		font-size: 6vw;
 	}
 
+	
 	.navbar-tabs h3,
 	.nav-slide h3 {
 		font-size: 3vw;
 	}
-
+	
 	p {
 		font-size: 3vw;
 		;
 	}
 
 	.navbar-tab {
-		font-size: 1.8rem;
+		font-size: 1.2rem;
 		border: 1px var(--PF);
 		border-radius: 16px;
 	}

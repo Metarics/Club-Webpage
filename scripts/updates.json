@@ -1,22 +1,22 @@
 [
     {
         "id" : 0,
-        "title" : "Meet and Greet",
+        "title" : "Update 1",
         "content" : "We met for discussing about stuff"
     },
     {
         "id" : 1,
-        "title" : "Meet and Greet",
+        "title" : "Update 2",
         "content" : "We met for discussing about stuff"
     },
     {
         "id" : 2,
-        "title" : "Meet and Greet",
+        "title" : "Update 3",
         "content" : "We met for discussing about stuff"
     },
     {
         "id" : 3,
-        "title" : "Meet and Greet",
+        "title" : "Update 4",
         "content" : "We met for discussing about stuff"
     }
 ]
