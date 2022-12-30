@@ -1,7 +1,6 @@
 .header {
     background-color: var(--PB);
     box-shadow: 1px 1px 4px 0 var(--PF);
-    position: fixed;
     width: 100%;
     z-index: 3;
     opacity: 0.7;

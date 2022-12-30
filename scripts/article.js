@@ -12,6 +12,7 @@ fetch('pages/'+id.toString(10)+'.json')
         return response.json();
     })
     .then(function (page) {
+        document.title = page["title"];
         PageTitle.innerHTML = page["title"];
         PageContent.innerHTML = page["content"];
     })
