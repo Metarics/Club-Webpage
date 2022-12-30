@@ -25,3 +25,9 @@ article br {
     content: ""; 
     margin-top: 24px; 
 }
+#page-content {
+    text-shadow: 0rem 0rem 0rem;
+}
+a {
+    color: var(--SF);
+}
