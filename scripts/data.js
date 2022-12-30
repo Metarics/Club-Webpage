@@ -31,5 +31,4 @@ fetch('scripts/updates.json')
         let text = document.createElement("p");
         text.innerHTML = "Connection Error..";
         updateWindow.appendChild(text);
-        // console.log('error retrieving data for updates ' + err);
     });

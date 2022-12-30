@@ -32,7 +32,6 @@
 
 body {
 	color: var(--SF);
-	/* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 	font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	text-shadow: 0rem 1rem 1rem var(--SB);
 	scroll-snap-type: proximity;
@@ -41,11 +40,6 @@ body {
 a {
 	text-decoration: none;
 }
-
-/* .tagcloud {
-	position: absolute;
-	pointer-events: none;
-} */
 
 .box {
 	width: 100%;
@@ -116,4 +110,53 @@ a {
 .fancy-button:active {
 	box-shadow: none;
 	transform: translateY(0);
+}
+
+/* media queries */
+
+@media (orientation: landscape) {
+
+	.navbar-tabs h1,
+	.nav-slide h1 {
+		font-size: 4rem;
+	}
+
+	.navbar-tabs h3,
+	.nav-slide h3 {
+		font-size: 1rem;
+	}
+
+	.navbar-tab {
+		font-size: 1rem;
+	}
+}
+
+@media (orientation: portrait) {
+
+	.navbar-tabs-container,
+	.navbar-tabs-container--top {
+		height: 8vh;
+	}
+
+	.navbar-tabs h1,
+	.nav-slide h1 {
+		font-size: 6vw;
+	}
+
+	
+	.navbar-tabs h3,
+	.nav-slide h3 {
+		font-size: 3vw;
+	}
+	
+	p {
+		font-size: 3vw;
+		;
+	}
+
+	.navbar-tab {
+		font-size: 1.2rem;
+		border: 1px var(--PF);
+		border-radius: 16px;
+	}
 }
