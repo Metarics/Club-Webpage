@@ -16,7 +16,7 @@ fetch('pages/'+id.toString(10)+'.json')
         PageContent.innerHTML = page["content"];
     })
     .catch (function (err) {
-        PageTitle.innerHTML = "404 Not found";
+        PageTitle.innerHTML = "404:Page Not found";
         PageTitle.align = "center";
         PageContent.style.visibility = "hidden";
     console.log('error retrieving data for article ' + err);
