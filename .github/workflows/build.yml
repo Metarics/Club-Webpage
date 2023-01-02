@@ -31,7 +31,7 @@ jobs:
           zip -r linux-release.zip build/
           echo "done!"
       - name: "release"
-        uses: softprops/action-gh-release@latest
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: "pre-release"
           token: ${{ secrets.NANDAN_GITHUB_TOKEN }}
