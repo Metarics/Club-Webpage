@@ -13,9 +13,10 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
-        uses: actions/checkout@v3
       - name: "Build"
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           node-version: ${{ matrix.node-version }}
         run: |
@@ -25,7 +26,6 @@ jobs:
           nativefier -p windows metarics.github.io build/
           zip -r windows-release.zip build/
           echo "done!"
-        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.NANDAN_GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
