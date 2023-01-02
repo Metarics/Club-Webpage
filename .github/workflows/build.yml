@@ -8,24 +8,24 @@ on:
 jobs:
   pre-release:
     name: "Pre Release"
-    runs-on: "windows-latest"
+    runs-on: "ubuntu-latest"
     strategy:
       matrix:
         node-version: [18.x]
     steps:
-      - name: "Build"
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
         run: |
-          run: sudo apt-get install -y zip
           npm install -g nativefier
           mkdir build
           nativefier -p windows metarics.github.io build/
           zip -r windows-release.zip build/
           echo "done!"
+      - name: "release"
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.NANDAN_GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
