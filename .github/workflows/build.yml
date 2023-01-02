@@ -18,6 +18,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: build for windows
         run: |
           npm install -g nativefier
           mkdir build
