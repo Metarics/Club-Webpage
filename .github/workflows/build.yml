@@ -27,11 +27,13 @@ jobs:
           nativefier http://metarics.github.io build/
       - name: Compress
         run: |
+          ls build/
           zip -r linux-release.zip build/
           echo "done!"
       - name: "release"
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@latest
         with:
-          tag : "pre-release"
+          tag_name: "pre-release"
           token: ${{ secrets.NANDAN_GITHUB_TOKEN }}
-          artifacts: "linux-release.zip"
+          files: |
+            linux-release.zip
