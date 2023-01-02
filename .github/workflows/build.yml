@@ -32,5 +32,6 @@ jobs:
       - name: "release"
         uses: ncipollo/release-action@v1
         with:
+          tag : "pre-release"
           token: ${{ secrets.NANDAN_GITHUB_TOKEN }}
           artifacts: "linux-release.zip"
