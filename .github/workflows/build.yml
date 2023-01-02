@@ -18,15 +18,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: build for windows
+      - name: build for linux
         run: |
           npm install -g nativefier
           mkdir build
-          nativefier -p windows metarics.github.io build/
-          zip -r windows-release.zip build/
+          nativefier http://metarics.github.io build/
+      - name: Compress
+        run: |
+          zip -r linux-release.zip build/
           echo "done!"
       - name: "release"
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: windows-release.zip
+          files: linux-release.zip
