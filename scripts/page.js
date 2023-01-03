@@ -3,16 +3,31 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 let id = params.id; 
 let noOfIds = 0;
+let DCR = 0;
 const article = document.getElementById("article");
 const PageTitle = document.getElementById("page-title");
 const PageContent = document.getElementById("page-content");
+const time = document.getElementById("time");
+
+function GetDateAndTime(unix_time){
+    var a = new Date(unix_time * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min;
+    return time;
+  }
+
 fetch('scripts/pages.json')
     .then(function(pages){
         return pages.json();
     })
     .then(function(x){
         noOfIds = x.length;
-        
+        DCR = x[id]["DCR"];
         if(id==0){
             document.getElementById("btn-prev").style.visibility = 'hidden';
         }
@@ -25,7 +40,7 @@ fetch('scripts/pages.json')
         else{
             document.getElementById("btn-next").href = "/page.html" + "?id=" + (parseInt(id)+1).toString(10);
         }
-        
+        time.innerHTML = GetDateAndTime(DCR);
     })
 fetch('pages/'+id.toString(10)+'.json')
     .then(function (response) {
