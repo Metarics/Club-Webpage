@@ -2,7 +2,7 @@
 	--PF: #fff;
 	--PB: #eee;
 	--SF: #000;
-	--SB: rgba(70, 70, 70, 0.333);
+	--SB: rgba(26, 26, 26, 0.8);
 }
 
 @media (prefers-color-scheme: dark) {
