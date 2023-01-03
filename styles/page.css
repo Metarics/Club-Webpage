@@ -1,5 +1,4 @@
 .header {
-    background-color: var(--PB);
     box-shadow: 1px 1px 4px 0 var(--PF);
     width: 100%;
     z-index: 3;
@@ -7,7 +6,7 @@
 }
 
 .header .logo {
-    display: block;
+    display: contents;
     float: left;
     font-size: 2em;
     padding: 1% 2%;
@@ -15,7 +14,7 @@
 }
 
 article{
-    padding: 10%;
+    padding: 0 10%;
     white-space: pre-line;
     font-size: x-large;
 }
@@ -30,4 +29,16 @@ article br {
 }
 a {
     color: var(--SF);
+    display: inline-block;
+}
+#btn-prev{
+    text-shadow: 0 0 20px 0;
+    position: absolute;
+    padding: 10px 40px;
+}
+#btn-next{
+    text-shadow: 0 0 20px 0;
+    position: absolute;
+    right: 0px;
+    padding: 10px 40px;
 }

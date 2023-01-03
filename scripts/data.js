@@ -5,7 +5,7 @@ fetch('scripts/updates.json')
         return response.json();
     })
     .then(function (data) {
-        var noOfUpdates = 0;
+        var noOfUpdates = data.length;
         data.forEach(x => {
             let box = document.createElement("div");
             let h2 = document.createElement("h2");
@@ -19,7 +19,6 @@ fetch('scripts/updates.json')
             updateWindow.appendChild(box);
             box.appendChild(h2);
             box.appendChild(p);
-            noOfUpdates += 1;
         })
         if(noOfUpdates==0){
             let text = document.createElement("p");

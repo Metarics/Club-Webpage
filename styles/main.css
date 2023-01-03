@@ -5,7 +5,7 @@
 	--SB: rgba(70, 70, 70, 0.333);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
 	body{
 		background-color: #000;
 	}
@@ -72,6 +72,7 @@ a {
 .fancy-button {
 	appearance: none;
 	background-color: transparent;
+	opacity: 0.9;
 	border: 2px solid var(--SF);
 	border-radius: 12px;
 	box-sizing: border-box;
