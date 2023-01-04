@@ -49,7 +49,11 @@ fetch('pages/'+id.toString(10)+'.json')
     .then(function (page) {
         document.title = page["title"];
         PageTitle.innerHTML = page["title"];
-        PageContent.innerHTML = page["content"];
+        page["content"].forEach(para => {
+            temp = document.createElement("p");
+            temp.innerHTML = page["content"];
+            PageContent.appendChild(temp);
+        });
     })
     .catch (function (err) {
         PageTitle.innerHTML = "404:Page Not found";

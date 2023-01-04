@@ -31,9 +31,10 @@ jobs:
           zip -r linux-release.zip build/
           echo "done!"
       - name: "release"
-        uses: softprops/action-gh-release@v1
+        uses: svenstaro/upload-release-action@v2
         with:
           tag_name: "pre-release"
           token: ${{ secrets.NANDAN_GITHUB_TOKEN }}
           files: |
             linux-release.zip
+          body: "Binary for linux"

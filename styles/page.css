@@ -19,11 +19,10 @@ article{
     font-size: x-large;
 }
 
-article br {
-    display: block;
-    content: ""; 
-    margin-top: 24px; 
+p{
+    padding-bottom: 36px;
 }
+
 #page-content {
     text-shadow: 0rem 0rem 0rem;
 }
